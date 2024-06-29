@@ -1,11 +1,9 @@
-# VERONIKA GOLOVKOVA ***
-***
-
-
+# VERONIKA GOLOVKOVA 
+  
+  
 ## Junior Frontend Developer
-
-
-
+  
+  
 ## Contact Information
 
 - **Phone:** +7 (902) 632-07-41
