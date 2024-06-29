@@ -48,12 +48,12 @@ int summation(int num) {
 
 ## Education
 
-- Ural Federal University: Publishing and editing
-- School 21: a computer programming school 
-- RS School: JavaScript / Front-end Course
+- **Ural Federal University:** Publishing and editing
+- **School 21:** a computer programming school 
+- **RS School:** JavaScript / Front-end Course
 
 
 ## Languages
 
-- Russian(Native)
-- English (Intermediate)
+- **Russian** (Native)
+- **English** (Intermediate)
