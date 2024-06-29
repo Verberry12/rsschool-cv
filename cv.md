@@ -1,7 +1,9 @@
 # VERONIKA GOLOVKOVA
-***
+
+
 
 ## Junior Frontend Developer
+
 
 
 ## Contact Information
