@@ -135,7 +135,7 @@ li::marker {
   box-sizing: border-box;
 }
 
-.name {
+.id {
   margin-top: 7.5%;
   padding-left: 40px;
 }
