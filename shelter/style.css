@@ -51,12 +51,12 @@ h3 {
     line-height: 45.5px;
 }
 
-#unique-h3 {
+#h3-about {
     text-align: left;
     margin-bottom: 25px;
 }
 
-#unique-h3-footer {
+#h3-footer {
     color: #FFFFFF;
     text-align: left;
 }
@@ -72,7 +72,7 @@ h4 {
 }
 
 
-#contacts-in-footer {
+#h4-contacts-in-footer {
     color: #F1CDB3;
 }
 
@@ -95,7 +95,7 @@ p {
     color: #4C4C4C;
 }
 
-#unique-p-donat {
+#p-donat {
     color: #B2B2B2;
     font-size: 12px;
     font-style: italic;
@@ -103,12 +103,12 @@ p {
     margin-top: 20px;
 }
 
-#unique-p-start {
+#p-start {
     color: #CDCDCD;
 
 }
 
-#unique-p-logo { 
+#p-logo { 
     color: #FFFFFF;
     text-align: center;
     font-size: 13px; 
@@ -144,6 +144,17 @@ p {
     /* border: 1px solid rgb(109, 109, 223);*/
     position: relative; 
     margin-top: 30px;
+}
+
+.header a {
+    text-decoration: none;
+    color: #F1CDB3;
+}
+
+.header a:hover {
+    color: #FDDCC4;
+    transition: 0.5s;
+
 }
 
 .menu {
@@ -651,4 +662,21 @@ margin-left: 40px;
 
 .contact-add2 img {
     margin-right: 20px;
+}
+
+.information-in-footer a {
+    text-decoration: none;
+    font-family: "Georgia", Times, "Times New Roman", serif; 
+    font-weight: 300;
+    font-style: normal;
+    color: #545454;
+    font-size: 20px;  
+    letter-spacing: 0.06em;
+    color: #F1CDB3;
+}
+
+.information-in-footer a:hover {
+    color: #FDDCC4;
+    transition: 0.5s;
+
 }
