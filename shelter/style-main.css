@@ -196,6 +196,10 @@ p {
     width: 100%;
 }
 
+.current {
+    cursor: default;
+}
+
 .current:after {
     content: '';
     display: block;
