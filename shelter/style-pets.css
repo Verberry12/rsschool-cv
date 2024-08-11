@@ -23,6 +23,7 @@ h1 {
     line-height: 110%;
     letter-spacing: 0.06em;
     margin-bottom: 10px;
+    transition: 1s ease-in-out;
 }
 
 h2 {
@@ -104,6 +105,7 @@ p {
     width: auto;
     height: 120px;
     background-color: #fff;
+    /* border: 2px solid rgb(187, 0, 255); */
 }
 
 .header {
@@ -112,24 +114,33 @@ p {
     height: 120px;
     position: relative; 
     padding-top: 30px;
+    /* border: 2px solid rgb(0, 255, 204); */
+}
+
+.logo {
+    /* border: 2px solid rgb(0, 255, 60); */
 }
 
 .header a {
     text-decoration: none;
-    color: #545454;
+    color: #545454; 
+    transition: 1s ease-in-out;
 }
 
-.header h1:hover {
+.logo a:hover {
     color: #292929;
-    transition: 0.5s;
+}
+
+.burger-menu {
+    display: none;
 }
 
 .menu {
     position: absolute;
     right: 0;
     margin-top: -4px;
+    /* border: 2px solid rgb(255, 187, 0); */
 }
-
 
 .menu ul{
     display: flex;
@@ -153,7 +164,6 @@ p {
 
 .menu a:hover {
     color: #292929;
-    transition: 0.5s;
 }
   
 .link {
@@ -166,7 +176,7 @@ p {
     display: block;
     height: 3px;
     background: #F1CDB3;
-    transition: 1s;
+    transition: 1s ease-in-out;
     width: 0;
 }
 
@@ -190,6 +200,39 @@ p {
     color: #292929;
 }
 
+@media (max-width: 1280px) {
+
+    .header {
+        width: 708px;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+}
+    
+@media (max-width: 768px) {
+
+    .header {
+        width: 280px;
+    }
+
+    .menu {
+        display: none;
+    }
+    .burger-menu {
+        display: flex;
+        position: absolute;
+        right: 0%;
+        margin-top: 20px;
+    }
+
+}
+
+
+
+
+
 .Our-Friends {
     display: flex;
     flex-direction: column;
@@ -198,6 +241,7 @@ p {
     background-color: #F6F6F6;
     align-items: center;
     justify-items: center;
+    border: 2px solid rgb(255, 55, 0);
 }
 
 .our-pets{
@@ -208,6 +252,7 @@ p {
     width: 1280px;
     height: 1342px;
     padding-top: 80px;
+    border: 2px solid rgb(0, 255, 229);
 }
 
 .cards-and-buttons { 
@@ -216,6 +261,7 @@ p {
     height: 1162px;
     width: 1200px;
     margin-top: 60px;
+    border: 2px solid rgb(229, 96, 156);
 }
 
 .page-buttons {
@@ -224,6 +270,7 @@ p {
     justify-content: center;
     margin-top: -30px;
     gap: 20px;
+    /* border: 2px solid rgb(255, 230, 0); */
 }
 
 
@@ -235,13 +282,13 @@ p {
     border: 2px solid #F1CDB3; 
     background-color: #F6F6F6;
     border-radius: 100px;
+    transition: 1s ease-in-out;
 }
 
 .btn-for-pages:hover {
     background-color: #FDDCC4;
     border: 2px solid transparent;
     cursor: pointer;
-    transition: 0.5s;
 }
 
 .btn-current-page { 
@@ -291,6 +338,7 @@ p {
     justify-content: space-between;
     align-items: start;
     margin-bottom: 60px;
+    /* border: 2px solid rgb(68, 0, 255); */
 } 
 
 .pet-card {
@@ -327,24 +375,78 @@ p {
     font-size: 17px; 
     margin-bottom: 30px; 
     letter-spacing: 0.06em;
-
+    transition: 1s ease-in-out;
 }
 
 .pet-card {
-    transition: 0.5s;
+    transition: 1s ease-in-out;
     cursor: pointer;
 }
 .pet-card:hover {
-    background-color: #FFFFFF;   
+    background-color: #FFFFFF;  
+    box-shadow: 0px 5px 10px 0px #CDCDCD;
 }
 
 .pet-card:hover .btn-pet {
     background-color: #FDDCC4;
     border: 2px solid transparent;
-    transition: 0.5s;
 }
 
+@media (max-width: 1280px) {
 
+    .Our-Friends {
+        height: 1733px;
+        
+    }
+
+    .cards-and-buttons {
+        width: 708px;
+        height: 1603px;
+        margin-top: 30px;
+    }
+
+    .cards {
+        width: 610px;
+        height: 1380px;
+        overflow: hidden;
+        gap: 30px 40px;
+        margin-bottom: 55px;
+        justify-content: center;
+        align-items: center;
+        margin-left: 50px;
+    }
+}
+    
+@media (max-width: 768px) {
+
+    .Our-Friends {
+        height: 1649px;
+    }
+
+    .cards-and-buttons {
+        width: 300px;
+        height: 1565px;  
+        margin-top: 40px;
+    }
+
+    .cards {
+        width: 270px;
+        height: 1365px;
+        overflow: hidden;
+        margin-left: 12px;
+        margin-bottom: 67px;
+    }
+
+    .page-buttons {
+        gap: 10px;
+    }
+
+    .Our-Friends h3 {
+        font-size: 25px;
+        line-height: 130%;
+        margin-top: -40px;
+    }
+}
 
 
 
@@ -355,7 +457,7 @@ p {
     flex-direction: column;
     width: auto;
     height: 350px;
-
+    /* border: 2px solid rgb(255, 234, 0); */
     align-items: center;
     justify-items: center; 
     background: url(./assets/img/noise-transparent@2x.png),
@@ -368,6 +470,7 @@ p {
     margin-top: 40px;
     width: 1200px;
     height: 310px;
+    /* border: 2px solid rgb(29, 141, 135); */
 }
 
 .information-in-footer {
@@ -375,18 +478,21 @@ p {
     flex-direction: row;
     gap: 153px; 
     margin-right: 160px;
+    /* border: 2px solid rgb(170, 255, 0); */
 }
 
 .column-1 {
     width: 285px;
     height: avto; 
     padding-top: 15px;
+    /* border: 2px solid rgb(187, 0, 255); */
 }
 
 .column-2 {
     width: 302px;
     height: auto; 
     padding-top: 15px;
+    /* border: 2px solid rgb(187, 0, 255); */
 }
 
 .contact {
@@ -409,7 +515,6 @@ p {
     flex-direction: row;
     margin-top: 32px;
     align-items: center;
-
 }
 
 .contact img {
@@ -427,24 +532,112 @@ p {
 .information-in-footer a {
     text-decoration: none;
     color: #F1CDB3;
+    transition: 1s ease-in-out;
 }
 
-.information-in-footer a:hover {
-    color: #FDDCC4;
-    transition: 0.5s;
-}
 
 .contact:hover a {
-    color: #FDDCC4; 
-    transition: 0.5s;
+    color: #fce6d6; 
 }
 
 .contact-add1:hover a {
-    color: #FDDCC4; 
-    transition: 0.5s;
+    color: #fce6d6;  
 }
 
 .contact-add2:hover a {
-    color: #FDDCC4; 
-    transition: 0.5s;
+    color: #fce6d6;  
+}
+
+@media (max-width: 1280px) {
+
+    .footer {
+        width: auto;
+        height: 639px;
+    }
+
+    .Contacts { 
+        width: 768px;
+        height: 639px;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .information-in-footer {
+        /* order: 1; */
+        gap: 60px;
+        margin-bottom: 65px;
+        margin-top: 15px;
+        margin-right: 0px;
+    }
+
+    .end-dog{
+        align-items: flex-end;
+        margin-top: -8px;
+        /* margin-bottom: 0; надо ли размер ваще */
+        /* width: 300;
+        height: 310; */
+    }
+
+}
+
+@media (max-width: 768px) {
+    .footer {
+        width: auto;
+        height: 809px;
+    }
+
+    .Contacts { 
+        width: 320px;
+        height: 809px;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0px;
+        gap: 40px;
+    }
+
+
+
+    .information-in-footer {
+        flex-direction: column;
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    .contact {
+        justify-content: center;
+    }
+
+    .column-1 {
+        padding-top: 0px;
+        margin-top: -25px;
+        }
+    .column-2 {
+        padding-top: 0px;
+        margin-top: -25px;
+        }
+
+    .end-dog img {
+        width: 260px;
+        height: 269px;
+        margin-top: -51.5px;
+    }
+
+    .h3-footer {
+        font-size: 25px;
+        line-height: 130%;
+        text-align: center;
+    }
+
+    .information-in-footer br {
+        display: none;
+    }
+
+    .column-1 .h3-footer {
+        width: 278px;
+    }
+
+    .column-2 .h3-footer {
+        width: 270px;
+    }
 }
