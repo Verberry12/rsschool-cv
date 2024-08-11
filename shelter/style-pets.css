@@ -105,7 +105,6 @@ p {
     width: auto;
     height: 120px;
     background-color: #fff;
-    /* border: 2px solid rgb(187, 0, 255); */
 }
 
 .header {
@@ -114,11 +113,6 @@ p {
     height: 120px;
     position: relative; 
     padding-top: 30px;
-    /* border: 2px solid rgb(0, 255, 204); */
-}
-
-.logo {
-    /* border: 2px solid rgb(0, 255, 60); */
 }
 
 .header a {
@@ -139,7 +133,6 @@ p {
     position: absolute;
     right: 0;
     margin-top: -4px;
-    /* border: 2px solid rgb(255, 187, 0); */
 }
 
 .menu ul{
@@ -200,7 +193,7 @@ p {
     color: #292929;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
 
     .header {
         width: 708px;
@@ -211,7 +204,7 @@ p {
     }
 }
     
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 
     .header {
         width: 280px;
@@ -241,7 +234,6 @@ p {
     background-color: #F6F6F6;
     align-items: center;
     justify-items: center;
-    border: 2px solid rgb(255, 55, 0);
 }
 
 .our-pets{
@@ -252,7 +244,6 @@ p {
     width: 1280px;
     height: 1342px;
     padding-top: 80px;
-    border: 2px solid rgb(0, 255, 229);
 }
 
 .cards-and-buttons { 
@@ -261,7 +252,6 @@ p {
     height: 1162px;
     width: 1200px;
     margin-top: 60px;
-    border: 2px solid rgb(229, 96, 156);
 }
 
 .page-buttons {
@@ -270,7 +260,6 @@ p {
     justify-content: center;
     margin-top: -30px;
     gap: 20px;
-    /* border: 2px solid rgb(255, 230, 0); */
 }
 
 
@@ -338,7 +327,6 @@ p {
     justify-content: space-between;
     align-items: start;
     margin-bottom: 60px;
-    /* border: 2px solid rgb(68, 0, 255); */
 } 
 
 .pet-card {
@@ -392,13 +380,14 @@ p {
     border: 2px solid transparent;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
 
     .Our-Friends {
         height: 1733px;
-        
     }
-
+    .our-pets{
+        width: auto;
+    }
     .cards-and-buttons {
         width: 708px;
         height: 1603px;
@@ -417,10 +406,14 @@ p {
     }
 }
     
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 
     .Our-Friends {
         height: 1649px;
+    }
+
+    .our-pets{
+        width: auto;
     }
 
     .cards-and-buttons {
@@ -457,7 +450,6 @@ p {
     flex-direction: column;
     width: auto;
     height: 350px;
-    /* border: 2px solid rgb(255, 234, 0); */
     align-items: center;
     justify-items: center; 
     background: url(./assets/img/noise-transparent@2x.png),
@@ -470,7 +462,6 @@ p {
     margin-top: 40px;
     width: 1200px;
     height: 310px;
-    /* border: 2px solid rgb(29, 141, 135); */
 }
 
 .information-in-footer {
@@ -478,21 +469,18 @@ p {
     flex-direction: row;
     gap: 153px; 
     margin-right: 160px;
-    /* border: 2px solid rgb(170, 255, 0); */
 }
 
 .column-1 {
     width: 285px;
     height: avto; 
     padding-top: 15px;
-    /* border: 2px solid rgb(187, 0, 255); */
 }
 
 .column-2 {
     width: 302px;
     height: auto; 
     padding-top: 15px;
-    /* border: 2px solid rgb(187, 0, 255); */
 }
 
 .contact {
@@ -548,7 +536,7 @@ p {
     color: #fce6d6;  
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
 
     .footer {
         width: auto;
@@ -556,7 +544,7 @@ p {
     }
 
     .Contacts { 
-        width: 768px;
+        width: 767px;
         height: 639px;
         flex-direction: column;
         align-items: center;
@@ -564,7 +552,6 @@ p {
     }
 
     .information-in-footer {
-        /* order: 1; */
         gap: 60px;
         margin-bottom: 65px;
         margin-top: 15px;
@@ -574,14 +561,11 @@ p {
     .end-dog{
         align-items: flex-end;
         margin-top: -8px;
-        /* margin-bottom: 0; надо ли размер ваще */
-        /* width: 300;
-        height: 310; */
     }
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .footer {
         width: auto;
         height: 809px;

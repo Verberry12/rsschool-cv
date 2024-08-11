@@ -126,7 +126,6 @@ p {
     height: 908px;
     background: url(./assets/img/noise-transparent@2x.png),
     radial-gradient(at 30px 20px, rgb(91, 72, 58) 0%, rgb(16, 16, 16) 100%); 
-    /* border: 2px solid chartreuse; */
 }
 
 .header {
@@ -135,7 +134,6 @@ p {
     height: 60px;
     position: relative; 
     margin-top: 30px;
-    /* border: 2px solid rgb(0, 221, 255); */
 }
 
 .burger-menu {
@@ -147,9 +145,6 @@ p {
     color: #F1CDB3;
 }
 
-.logo {
-    /* border: 2px solid rgb(9, 134, 28); */
-}
 
 .header a {
     transition: 1s ease-in-out;
@@ -164,7 +159,6 @@ p {
     position: absolute;
     right: 0%;
     margin-top: -4px;
-    /* border: 2px solid rgb(255, 94, 0); */
 }
 
 
@@ -235,12 +229,10 @@ p {
     width: 1200px;
     height: 728px;
     margin-top: 90px;
-    /* border: 2px solid rgb(255, 0, 162); */
 }
 
 .Not-only img {
     margin-left: 40px;
-    /* border: 2px solid rgb(37, 64, 213); */
 }
 
 .start-text {
@@ -250,7 +242,6 @@ p {
     height: 322px;
     gap: 42px;
     margin-top: -80px;
-    /* border: 2px solid rgb(255, 174, 0); */
 }
 
 .Not-only a {
@@ -291,7 +282,7 @@ p {
 }
 
 
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
 
     .header {
         width: 708px;
@@ -332,14 +323,10 @@ p {
     .burger-menu {
         display: none;
     }
-    /* .btn-start {
-        justify-content: center;
-    } */
-
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .start-screen {
         width: auto;
         height: 902px;
@@ -401,7 +388,6 @@ p {
     align-items: center;
     justify-items: center;
     flex-direction: column;
-    /* border: 2px solid rgb(0, 183, 255); */
 }
 
 .about-wrapper {
@@ -413,20 +399,18 @@ p {
     justify-content: center;
     gap: 120px;
     margin-top: 80px;
-    /* border: 2px solid rgb(11, 116, 23); */
 }
 
 .text-about {
     width: 430px;
     height: 380px; 
-    /* border: 2px solid rgb(186, 74, 196); */
 }
 
 .About img {
     height: 408px; 
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
     .About {
         width: auto;
         height: 1048px;
@@ -447,7 +431,7 @@ p {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .About {
         width: auto;
         height: 974px;
@@ -480,7 +464,6 @@ p {
     .About p {
         text-align: justify;
         font-size: 15px; 
-        /* margin-left: ; */
     }
 }
 
@@ -494,7 +477,6 @@ p {
     background-color: #F6F6F6;
     align-items: center;
     justify-items: center;
-    /* border: 2px solid rgb(114, 8, 171); */
 }
 
 .our-pets{
@@ -505,7 +487,6 @@ p {
     height: 697px; 
     width: 1200px; 
     padding-top: 80px;
-    /* border: 2px solid rgb(115, 243, 184); */
 }
 
 .carousel {
@@ -513,7 +494,6 @@ p {
     flex-direction: row;
     align-items: center;   
     width: 1200px;
-    /* border: 2px solid rgb(255, 170, 0); */
 }
 
 .btn-round { 
@@ -544,7 +524,6 @@ p {
     margin-bottom: 60px;
     margin-left: 53px;
     margin-right: 53px;
-    /* border: 2px solid rgb(0, 153, 255); */
 } 
 
 .pet-card {
@@ -634,12 +613,15 @@ p {
     font-size: 17px;  
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
     .Our-Friends {
         width: auto;
         height: 877px;
     }
 
+    .our-pets{
+        width: auto;
+    }
     .carousel {
         width: 708px;
         gap: 12px;
@@ -659,7 +641,7 @@ p {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .Our-Friends {
         width: auto;
         height: 791px;
@@ -671,7 +653,6 @@ p {
 
     .carousel {
         width: 300px;
-        /* flex-direction: column; */
         flex-wrap: wrap;
         justify-content: center;
         gap: 82px;
@@ -717,7 +698,6 @@ p {
     background-color: #FFFFFF;
     align-items: center;
     justify-content: center;
-    /* border: 2px solid rgb(255, 0, 174); */
 }
 
 
@@ -734,7 +714,6 @@ p {
     align-items: center;
     justify-content: center;
     margin-top: -20px;
-    /* border: 2px solid rgb(6, 47, 181); */
 }
 
 .help-items {
@@ -747,7 +726,6 @@ p {
     margin-top: 55px;
     justify-content: center;
     gap: 55px;
-    /* border: 2px solid chartreuse; */
 }
 
 .all-icons {
@@ -755,17 +733,15 @@ p {
 	flex-wrap: wrap;
     gap: 55px 120px;
     justify-content: center; 
-    /* border: 2px solid rgb(123, 113, 187); */
 }
 
 .help-icons{
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* border: 2px solid rgb(234, 255, 0); */
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
     .Help-for-shelter {
         width: auto;
         height: 779px;
@@ -788,7 +764,7 @@ p {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 
     .Help-for-shelter {
         width: auto;
@@ -812,7 +788,6 @@ p {
 
 
     .all-icons {
-        /* margin-top: -20px; */
         width: 290px;
         height: 555px;
         gap: 30px 26px;
@@ -853,7 +828,6 @@ p {
     background-color: #F6F6F6;
     align-items: center;
     justify-items: center; 
-    /* border: 2px solid chartreuse; */
 }
 
 .donation {
@@ -862,7 +836,6 @@ p {
     height: 462px; 
     align-items: center;
     justify-content: center; 
-    /* border: 2px solid rgb(220, 76, 143); */
 }
 
 .donation-contents {
@@ -872,7 +845,6 @@ p {
     align-items: center;
     justify-content: center; 
     margin-top: -20px;
-    /* border: 2px solid rgb(47, 0, 255); */
 }
 
 .text-donation {
@@ -883,7 +855,6 @@ p {
     justify-items: center;
     flex-direction: column;
     margin-left: 30px;
-    /* border: 2px solid rgb(0, 200, 255); */
 }
 
 .card-for-donat{
@@ -913,12 +884,12 @@ p {
 }
 
 
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
     .In-addition {
         height: 783px;
     }
     .donation {
-        width: 768px;
+        width: 769px;
         height: 783px;
     }
 
@@ -936,7 +907,7 @@ p {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .In-addition {
         height: 542.2px;
     }
@@ -959,8 +930,6 @@ p {
         margin-top: 50px;
         align-items: center;
         margin-left: 0;
-        /* gap: 5px; */
-
     }
 
     .dog img{
@@ -997,7 +966,6 @@ p {
 
 
 .footer {
-    /* border: 2px solid rgb(3, 91, 173); */
     display: flex;
     flex-direction: column;
     width: auto;
@@ -1014,7 +982,6 @@ p {
     margin-top: 40px;
     width: 1200px;
     height: 310px;
-    /* border: 2px solid chartreuse; */
 }
 
 .information-in-footer {
@@ -1022,21 +989,18 @@ p {
     flex-direction: row;
     gap: 153px; 
     margin-right: 160px;
-    /* border: 2px solid rgb(187, 0, 255); */
 }
 
 .column-1 {
     width: 285px;
     height: auto; 
     padding-top: 15px;
-    /* border: 2px solid rgb(255, 247, 0); */
 }
 
 .column-2 {
     width: 302px;
     height: auto; 
     padding-top: 15px;
-    /* border: 2px solid rgb(255, 247, 0); */
 }
 
 .contact {
@@ -1099,7 +1063,7 @@ p {
     color: #fce6d6;  
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
 
     .footer {
         width: auto;
@@ -1107,7 +1071,7 @@ p {
     }
 
     .Contacts { 
-        width: 768px;
+        width: 769px;
         height: 639px;
         flex-direction: column;
         align-items: center;
@@ -1115,7 +1079,6 @@ p {
     }
 
     .information-in-footer {
-        /* order: 1; */
         gap: 60px;
         margin-bottom: 65px;
         margin-top: 15px;
@@ -1125,14 +1088,13 @@ p {
     .end-dog{
         align-items: flex-end;
         margin-top: -8px;
-        /* margin-bottom: 0; надо ли размер ваще */
-        /* width: 300;
-        height: 310; */
+        width: 300;
+        height: 310;
     }
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .footer {
         width: auto;
         height: 809px;
