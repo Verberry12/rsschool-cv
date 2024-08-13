@@ -23,6 +23,7 @@ h1 {
     line-height: 110%;
     letter-spacing: 0.06em;
     margin-bottom: 10px;
+    transition: 1s ease-in-out;
 }
 
 h2 {
@@ -50,7 +51,6 @@ h3 {
     color: #FFFFFF;
     text-align: left;
 }
-
 
 h4 {
     font-family: "Georgia", Times, "Times New Roman", serif; 
@@ -97,7 +97,6 @@ p {
 }
 
 
-
 .wrapper-for-header {
     display: flex;
     flex-direction: column;
@@ -118,12 +117,16 @@ p {
 
 .header a {
     text-decoration: none;
-    color: #545454;
+    color: #545454; 
+    transition: 1s ease-in-out;
 }
 
-.header h1:hover {
+.logo a:hover {
     color: #292929;
-    transition: 0.5s;
+}
+
+.burger-menu {
+    display: none;
 }
 
 .menu {
@@ -131,7 +134,6 @@ p {
     right: 0;
     margin-top: -4px;
 }
-
 
 .menu ul{
     display: flex;
@@ -155,7 +157,6 @@ p {
 
 .menu a:hover {
     color: #292929;
-    transition: 0.5s;
 }
   
 .link {
@@ -168,7 +169,7 @@ p {
     display: block;
     height: 3px;
     background: #F1CDB3;
-    transition: 1s;
+    transition: 1s ease-in-out;
     width: 0;
 }
 
@@ -191,6 +192,39 @@ p {
 #black {
     color: #292929;
 }
+
+@media (max-width: 1279px) {
+
+    .header {
+        width: 708px;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+}
+    
+@media (max-width: 767px) {
+
+    .header {
+        width: 280px;
+    }
+
+    .menu {
+        display: none;
+    }
+    .burger-menu {
+        display: flex;
+        position: absolute;
+        right: 0%;
+        margin-top: 20px;
+    }
+
+}
+
+
+
+
 
 .Our-Friends {
     display: flex;
@@ -237,13 +271,13 @@ p {
     border: 2px solid #F1CDB3; 
     background-color: #F6F6F6;
     border-radius: 100px;
+    transition: 1s ease-in-out;
 }
 
 .btn-for-pages:hover {
     background-color: #FDDCC4;
     border: 2px solid transparent;
     cursor: pointer;
-    transition: 0.5s;
 }
 
 .btn-current-page { 
@@ -329,24 +363,86 @@ p {
     font-size: 17px; 
     margin-bottom: 30px; 
     letter-spacing: 0.06em;
-
+    transition: 1s ease-in-out;
 }
 
 .pet-card {
-    transition: 0.5s;
+    transition: 1s ease-in-out;
     cursor: pointer;
 }
 .pet-card:hover {
-    background-color: #FFFFFF;   
+    background-color: #FFFFFF;  
+    box-shadow: 0px 5px 10px 0px #CDCDCD;
 }
 
 .pet-card:hover .btn-pet {
     background-color: #FDDCC4;
     border: 2px solid transparent;
-    transition: 0.5s;
 }
 
+@media (max-width: 1279px) {
 
+    .Our-Friends {
+        height: 1733px;
+    }
+    .our-pets{
+        width: auto;
+    }
+    .cards-and-buttons {
+        width: 708px;
+        height: 1603px;
+        margin-top: 30px;
+    }
+
+    .cards {
+        width: 610px;
+        height: 1380px;
+        overflow: hidden;
+        gap: 30px 40px;
+        margin-bottom: 55px;
+        justify-content: center;
+        align-items: center;
+        margin-left: 50px;
+    }
+}
+    
+@media (max-width: 767px) {
+
+    .Our-Friends {
+        height: 1649px;
+    }
+
+    .our-pets{
+        width: auto;
+    }
+
+    .cards-and-buttons {
+        width: 300px;
+        height: 1565px;  
+        margin-top: 42px;
+    }
+
+    .cards {
+        width: 300px;
+        height: 1380px;
+        overflow: hidden;
+        margin-left: 0px;
+        margin-bottom: 67px;
+        padding-top: 5px;
+        margin-top: -5px;
+    }
+
+    .page-buttons {
+        gap: 10px;
+        margin-top: -35px;
+    }
+
+    .Our-Friends h3 {
+        font-size: 25px;
+        line-height: 130%;
+        margin-top: -40px;
+    }
+}
 
 
 
@@ -356,8 +452,7 @@ p {
     display: flex;
     flex-direction: column;
     width: auto;
-    height: 350px;
-
+    height: 354px;
     align-items: center;
     justify-items: center; 
     background: url(./assets/img/noise-transparent@2x.png),
@@ -381,7 +476,7 @@ p {
 
 .column-1 {
     width: 285px;
-    height: avto; 
+    height: auto; 
     padding-top: 15px;
 }
 
@@ -396,22 +491,23 @@ p {
     flex-direction: row;
     margin-top: 38px;
     align-items: center;
+    justify-items: center;
 }
+
+
 
 .contact-add1 {
     display: flex;
     flex-direction: row;
     margin-top: 34px;
     align-items: center;
-
 }
 
 .contact-add2 {
     display: flex;
     flex-direction: row;
-    margin-top: 32px;
     align-items: center;
-
+    margin-top: 32px;
 }
 
 .contact img {
@@ -428,25 +524,136 @@ p {
 
 .information-in-footer a {
     text-decoration: none;
+    font-family: "Georgia", Times, "Times New Roman", serif; 
+    font-weight: 300;
+    font-style: normal;
+    color: #545454;
+    font-size: 20px;  
+    letter-spacing: 0.06em;
     color: #F1CDB3;
-}
-
-.information-in-footer a:hover {
-    color: #FDDCC4;
-    transition: 0.5s;
+    transition: 1s ease-in-out;
 }
 
 .contact:hover a {
-    color: #FDDCC4; 
-    transition: 0.5s;
+    color: #fce6d6; 
 }
 
 .contact-add1:hover a {
-    color: #FDDCC4; 
-    transition: 0.5s;
+    color: #fce6d6; 
 }
 
 .contact-add2:hover a {
-    color: #FDDCC4; 
-    transition: 0.5s;
+    color: #fce6d6;  
+}
+
+.end-dog {
+    width: 300px;
+    height: 310px;
+    margin-top: 4.245px;
+}
+
+@media (max-width: 1279px) {
+
+    .footer {
+        width: auto;
+        height: 639px;
+    }
+
+    .Contacts { 
+        width: 769px;
+        height: 639px;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .information-in-footer {
+        gap: 52px;
+        margin-top: 15px;
+        margin-right: 0px;
+    }
+
+    .end-dog{
+        margin-top: 59px;
+        width: 300;
+        height: 310;
+        border: 0px;
+        padding: 0px;
+    }
+
+    .contact-add2 {
+        margin-top: 30px;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .footer {
+        width: auto;
+        height: 809px;
+    }
+
+    .Contacts { 
+        width: 320px;
+        height: 809px;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0px;
+        gap: 40px;
+    }
+
+    .information-in-footer {
+        flex-direction: column;
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    .contact {
+        justify-content: center;
+    }
+
+    .column-1 {
+        padding-top: 0px;
+        margin-top: -28px;
+        margin-left: 10px;
+        }
+
+    .column-2 {
+        padding-top: 0px;
+        margin-top: -17px;
+        }
+
+    .end-dog img{
+        width: 260px;
+        height: 269px;
+        margin-top: -63px;
+        margin-left: 20px;
+    }
+
+    .h3-footer {
+        font-size: 25px;
+        line-height: 130%;
+        text-align: center;
+    }
+
+    .contact-add1 {
+        margin-top: 38px;
+    }
+
+    .contact-add2 {
+        margin-top: 40px;
+    }
+
+    .information-in-footer br {
+        display: none;
+    }
+
+    .column-1 .h3-footer {
+        width: 278px;
+    }
+
+    .column-2 .h3-footer {
+        width: 270px;
+        margin-left: 18px;
+    }
 }
