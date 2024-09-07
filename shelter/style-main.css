@@ -568,13 +568,14 @@ p {
     display: flex;
     flex-direction: row;
     align-items: center;   
+    justify-content: space-between;
     width: 1200px;
-    border: 1px solid rgb(8, 221, 164);
 }
 
 
 .btn-round { 
     align-items: center;
+    justify-content: center;
     padding: 15px 15px;
     width: 52px;
     height: 52px;
@@ -605,7 +606,6 @@ p {
     margin-right: 33px;
     padding-right: 20px;
     overflow: hidden;
-     border: 1px solid rgb(255, 47, 220);
 } 
 
 .pet-card {
@@ -1345,6 +1345,7 @@ body.lock {
     left: 0; /* Устанавливаем начальное положение */
     width: 100%; /* Занимаем всю ширину */
     height: 100%; /* Занимаем всю высоту */
+    
 }
 
 .pet_img {
@@ -1352,6 +1353,7 @@ body.lock {
     width: auto;
     height: 500px;
     margin-left: -50px;
+    border-radius: 9px;
 }
 
 .popup-text {
