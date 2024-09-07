@@ -37,24 +37,33 @@ function handlePopupClick(e) {
     e.preventDefault();
 }
 
+// Функция для получения ширины полосы прокрутки браузера
+function getScrollbarWidth() {
+    return window.innerWidth - document.documentElement.clientWidth;
+}
+  
 // Функция, которая отвечает за открытие попапа
 function popupOpen(currentPopup) {
     // Проверяем, существует ли объект попапа и разблокирована ли ссылка
     if (currentPopup && unlock) {
-        // Добавляем классу open к объекту попапа, чтобы он стал видимым
+        // Вычисляем ширину полосы прокрутки
+        const scrollbarWidth = getScrollbarWidth();
+        // Добавляем отступ справа к body, равный ширине полосы прокрутки
+        // Это нужно, чтобы предотвратить скачок контента при скрытии полосы прокрутки
+        document.body.style.paddingRight = scrollbarWidth + 'px';
+        // Добавляем класс "open" к попапу, чтобы сделать его видимым
         currentPopup.classList.add("open");
-        // Вешаем на объект попапа обработчик события клика. При клике внутри попапа будет выполняться код функции
-        currentPopup.addEventListener("click", function (e) {
-            // Проверяем, не по кнопке закрытия ли был клик
-            // Используем classList.contains("close-popup") для проверки наличия класса close-popup у элемента, по которому был клик
-            if (!e.target.classList.contains("close-popup")) {
-                // Если клик не по кнопке закрытия, вызываем функцию popupClose для закрытия попапа
+
+        // Находим элемент popup-body внутри currentPopup
+        const popupBody = currentPopup.querySelector('.popup-body'); 
+
+        // Вешаем обработчик события клика на popup-body
+        popupBody.addEventListener("click", function (e) {
+            // Проверяем, был ли клик сделан вне popup-content
+            if (!e.target.closest('.popup-content')) { 
+                // Если клик был сделан вне popup-content, закрываем попап
                 popupClose(currentPopup);
-            } else if (e.target.tagName === "A") { 
-                // Если клик по ссылке (например, по кнопке закрытия), то предотвращаем стандартное поведение ссылки (переход по ней)
-                // Это нужно, чтобы не переходить по ссылке внутри попапа
-                e.preventDefault();
-            }
+            } 
         });
 
         // Блокируем скролл
@@ -93,14 +102,41 @@ if (popupCloseIcon.length > 0) {
 
 // Функция, которая отвечает за закрытие попапа
 function popupClose(popupActive) {
-    // Проверяем, разблокирована ли ссылка
     if (unlock) {
-        // Удаляем класс "open" у объекта попапа, чтобы он стал невидимым
-        popupActive.classList.remove("open");
-        // Разблокируем скролл
-        document.body.style.overflowY = 'auto';
+      popupActive.classList.remove("open");
+  
+      // Получаем начальное значение paddingRight
+      const initialPaddingRight = parseInt(document.body.style.paddingRight || 0);
+      // Получаем ширину полосы прокрутки
+      const scrollbarWidth = getScrollbarWidth();
+  
+      // Создаем анимацию с помощью requestAnimationFrame
+      const animatePadding = () => {
+        let start = null;
+  
+        const step = (timestamp) => {
+          if (!start) start = timestamp;
+          const progress = Math.min((timestamp - start) / timeout, 1); // timeout - время анимации
+  
+          // Линейно уменьшаем paddingRight
+          const currentPadding = initialPaddingRight - scrollbarWidth * progress;
+          document.body.style.paddingRight = currentPadding + "px";
+  
+          if (progress < 1) {
+            requestAnimationFrame(step);
+          } else {
+            // По завершении анимации устанавливаем paddingRight в 0 и разблокируем скролл
+            document.body.style.paddingRight = "0";
+            // !!! Эта строка теперь выполняется синхронно с завершением анимации
+            document.body.style.overflowY = "auto";
+          }
+        };
+  
+        requestAnimationFrame(step);
+      };
+      animatePadding();
     }
-}
+  }
 
 
 /*----------------------------------------------- Carusel -----------------------------------------------*/
