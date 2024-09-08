@@ -127,8 +127,7 @@ function popupClose(popupActive) {
           } else {
             // По завершении анимации устанавливаем paddingRight в 0 и разблокируем скролл
             document.body.style.paddingRight = "0";
-            // !!! Эта строка теперь выполняется синхронно с завершением анимации
-            document.body.style.overflowY = "auto";
+            document.body.style.overflowY = "auto"; // !!! Эта строка теперь выполняется синхронно с завершением анимации
           }
         };
   
@@ -301,8 +300,6 @@ function generateCards(slideIndex) {
     // Возвращаем массив сгенерированных карточек
     return cards;
 }
-
-// ... (остальной код)
 
 // Инициализация карусели
 const initialCards = generateCards(currentSlideIndex);     // Генерируем карточки для начального слайда
