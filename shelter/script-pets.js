@@ -269,21 +269,26 @@ function updatePagination() {
 
   // Обновляем классы кнопок пагинации
   pageButtons.forEach(button => {
-    // Удаляем все классы
+    // Удаляем все классы у кнопки
     button.classList.remove("btn-current-page", "btn-inaccessible-page", "btn-for-pages");
-    // Добавляем класс "btn-inaccessible-page" для недоступных кнопок
+    // Получаем элемент с текстом внутри кнопки
+    const textElement = button.querySelector("span");
+  
+    // Добавляем классы кнопке и тексту в зависимости от состояния
     if (button.disabled) {
+      
+      textElement.classList.remove("h4-for-page"); // Удаляем класс черного текста (если был)
+      textElement.classList.add("h4-page-buttons"); // Серый текст для неактивных
       button.classList.add("btn-inaccessible-page");
-    // Добавляем класс "btn-current-page" для кнопки текущей страницы
     } else if (button.textContent === currentPage.toString()) {
       button.classList.add("btn-current-page");
-    // Добавляем класс "btn-for-pages" для остальных кнопок
     } else {
       button.classList.add("btn-for-pages");
+     textElement.classList.remove("h4-page-buttons"); // Удаляем класс серого текста (если был)
+      textElement.classList.add("h4-for-page"); // Черный текст для остальных
     }
   });
 }
-
 // Функция для обработки клика по кнопкам пагинации
 function handlePageButtonClick(event) {
   // Получаем кнопку, по которой был клик
