@@ -217,10 +217,12 @@ function shuffle(array) {
 
 // Функция для создания массива питомцев для всех страниц без повторений на одной странице
 function generatePetsArray() {
+  // Получаем текущее количество страниц
+  const currentPagesCount = window.innerWidth >= 1280 ? 6 : window.innerWidth >= 768 ? 8 : 16;
   // Создаем пустой массив для хранения данных
   const tempArray = [];
   // Цикл по всем страницам
-  for (let page = 0; page < pagesCount; page++) {
+  for (let page = 0; page < currentPagesCount; page++) {
     // Перемешиваем массив petsData для каждой страницы, создавая его копию
     const shuffledPets = shuffle([...petsData]);
     // Добавляем перемешанные питомцы в общий массив
@@ -324,6 +326,19 @@ attachModalListeners(); // !!! Добавляем вызов функции по
 
 // Обработчик события изменения размера окна
 window.addEventListener("resize", () => {
+  // Обновляем массив питомцев при изменении размера окна
+  petsArray = generatePetsArray(); 
+  // Обновляем количество страниц
+  updatePagesCount();
+  // Проверяем, не выходит ли текущая страница за пределы нового количества страниц
+  if (currentPage > pagesCount) {
+    currentPage = pagesCount; 
+  }
   updatePagination();
   displayPets(); 
 });
+
+// Функция для обновления количества страниц
+function updatePagesCount() {
+  pagesCount = window.innerWidth >= 1280 ? 6 : window.innerWidth >= 768 ? 8 : 16;
+}
