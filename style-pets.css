@@ -5,12 +5,28 @@
 
 * {
     box-sizing: border-box;
-  }
+}
 
 
-  html {
+html {
     scroll-behavior: smooth;
-  }
+}
+
+
+body.lock, html.lock {
+    overflow: hidden; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+}
+
+body {
+    overflow-y: auto; 
+    overflow-x: hidden;
+    transition: overflow-y 0.7s ease, transform 0.7s ease; 
+}
 
 
 h1 {
@@ -309,6 +325,7 @@ p {
     letter-spacing: 0.06em;
 }
 
+
 .h4-page-buttons {
     font-family: "Georgia", Times, "Times New Roman", serif; 
     font-weight: 300;
@@ -378,6 +395,11 @@ p {
 .pet-card:hover .btn-pet {
     background-color: #FDDCC4;
     border: 2px solid transparent;
+}
+
+.popup-link {
+  text-decoration: none;
+  color: inherit; 
 }
 
 @media (max-width: 1279px) {
@@ -656,4 +678,175 @@ p {
         width: 270px;
         margin-left: 18px;
     }
+}
+
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(41, 41, 41, 0.6);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    /* overflow-x: hidden; */
+    /* transition: all 0.7s ease 0s; */
+    visibility: hidden; 
+    transition: opacity 0.7s ease, visibility 0s 0.7s; 
+}
+
+
+.popup.open {
+    opacity: 1;
+    visibility: visible;
+    /* display: block;
+    transform: translateY(0); */
+    transition: opacity 0.7s ease;
+}
+
+
+.popup-body {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-window-with-button {
+    padding-left: 48px;
+    width: 1000px;
+    height: 552px;  
+    /* border: 1px solid hotpink ; */
+    position: relative;
+}
+
+.popup-content {
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 900px;
+    height: 500px;  
+    /* padding-left: 18px; */
+    background-color: #FAFAFA;
+    border-radius: 9px;
+}
+
+
+body.lock {
+    overflow: hidden; /* Скрываем скроллбар */
+    position: fixed; /* Фиксируем позицию тела */
+    top: 0; /* Устанавливаем начальное положение */
+    left: 0; /* Устанавливаем начальное положение */
+    width: 100%; /* Занимаем всю ширину */
+    height: 100%; /* Занимаем всю высоту */
+    
+}
+
+.pet_img {
+    /* border-radius: 9px 0 0 9px; */
+    width: auto;
+    height: 500px;
+    margin-left: -50px;
+    border-radius: 9px;
+}
+
+.popup-text {
+    width: 351px;
+    height: 362px;
+    margin-top: -40px;
+    /* margin-left: 50px; */
+    padding-left: 0px;
+    /* border: 1px solid rgb(12, 159, 17) ; */
+}
+
+.popup ul {
+    color: #F1CDB3;
+}
+
+.characteristics {
+    height: 102px;
+    margin-left: 15px;
+
+}
+
+.btn-round { 
+    align-items: center;
+    justify-content: center;
+    padding: 15px 15px;
+    width: 52px;
+    height: 52px;
+    border: 2px solid #F1CDB3; 
+    background-color: #F6F6F6;
+    border-radius: 100px;
+    transition: 1s ease-in-out;
+}
+
+
+.btn-round:hover {
+    background-color: #FDDCC4;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+
+.popup .btn-round {
+    position: absolute;
+    top: 2px;
+    right: 8px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+}
+
+.popup .btn-round:hover {
+    background-color: #FDDCC4;
+    border: 2px solid transparent;
+}
+
+
+
+
+.h3-modal-window{
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #000000;
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+.h4-modal-window{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    color: #000000;
+    padding-bottom: 45px;
+}
+
+.h5-modal-window-main-text{
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 114%;
+    letter-spacing: 0.06em;
+    color: #000000;
+    padding-bottom: 40px;
+}
+
+.h5-modal-window {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 210%;
+    letter-spacing: 0.06em;
+    color: #000000;
+    /* padding-left: 2px; */
+}
+
+.without-bold {
+    font-weight: 400;
 }
