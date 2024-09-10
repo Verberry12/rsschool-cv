@@ -327,15 +327,16 @@ attachModalListeners(); // !!! Добавляем вызов функции по
 // Обработчик события изменения размера окна
 window.addEventListener("resize", () => {
   // Обновляем массив питомцев при изменении размера окна
-  petsArray = generatePetsArray(); 
+ let pagesCountBuf=pagesCount;
   // Обновляем количество страниц
   updatePagesCount();
+  if(pagesCount!=pagesCountBuf) petsArray = generatePetsArray(); 
   // Проверяем, не выходит ли текущая страница за пределы нового количества страниц
   if (currentPage > pagesCount) {
     currentPage = pagesCount; 
   }
   updatePagination();
-  displayPets(); 
+  displayPets();
 });
 
 // Функция для обновления количества страниц
